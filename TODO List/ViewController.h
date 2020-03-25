@@ -1,15 +1,14 @@
-//
-//  ViewController.h
-//  TODO List
-//
-//  Created by ahmedpro on 3/23/20.
-//  Copyright © 2020 ahmedpro. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
+#import "Todo.h"
+#import "TodosObserverProt.h"
+#import "AddViewController.h"
+#import "EditViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property NSMutableArray *todos;
 
 @end
 
